@@ -11,6 +11,7 @@
             </span>
         </a>
 
+        {{-- Desktop Navigation --}}
         <nav class="nav__links" aria-label="Primary navigation">
             <a href="#home">Home</a>
             <a href="#features">Features</a>
@@ -21,15 +22,57 @@
         </nav>
 
         <div class="nav__actions">
-            <x-button href="#contact" variant="outline" size="sm">Sign In</x-button>
-            <x-button href="#menu" size="sm">Get Started</x-button>
+            <x-button href="#contact" variant="outline" size="sm">
+                Sign In
+            </x-button>
 
-            <button class="hamburger" type="button" aria-label="Open navigation menu">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-                     stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+            <x-button href="#menu" size="sm">
+                Get Started
+            </x-button>
+
+            {{-- Mobile Hamburger --}}
+            <button
+                id="mobileMenuButton"
+                class="hamburger"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="mobileMenu"
+            >
+                <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                >
                     <path d="M3 6h18M3 12h18M3 18h18"/>
                 </svg>
             </button>
+        </div>
+    </div>
+
+    {{-- Mobile Navigation --}}
+    <div id="mobileMenu" class="mobile-nav" aria-hidden="true">
+        <nav class="mobile-nav__links" aria-label="Mobile navigation">
+            <a href="#home">Home</a>
+            <a href="#features">Features</a>
+            <a href="#menu">Menu</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="mobile-nav__actions">
+            <a href="#contact" class="btn btn--outline">
+                Sign In
+            </a>
+
+            <a href="#menu" class="btn btn--primary">
+                Get Started
+            </a>
         </div>
     </div>
 </header>
