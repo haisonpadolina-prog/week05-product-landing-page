@@ -1,63 +1,86 @@
-<section id="home" class="overflow-hidden">
-    <div class="mx-auto grid max-w-7xl items-center gap-12 px-4 py-20 sm:px-6 lg:grid-cols-2 lg:px-8 lg:py-28">
-        <div>
-            <span class="inline-flex rounded-full border border-coffee-100 bg-white px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-coffee-700 shadow-sm">
-                Coffee made accessible
-            </span>
+<section class="hero hero--photo" id="home">
+    <img
+        class="hero__bg"
+        src="{{ asset('images/hero-cafe-bg.png') }}"
+        alt=""
+        aria-hidden="true"
+    >
+    <div class="hero__overlay"></div>
 
-            <h1 class="mt-6 max-w-2xl text-4xl font-black tracking-tight text-stone-950 sm:text-5xl lg:text-6xl">
-                Premium-inspired coffee for your everyday moments.
+    <div class="container hero__photo-content">
+        <div class="hero__copy">
+            <span class="label">Anabu, Imus</span>
+
+            <h1 class="hero__title">
+                Premium coffee for your everyday moments.
             </h1>
 
-            <p class="mt-6 max-w-xl text-lg leading-8 text-stone-600">
-                Enjoy coffee, frappes, tea, matcha, and treats from B1T1 Takeaway Coffee —
-                made for quick stops, study breaks, commutes, and catch-ups in Imus.
+            <p class="hero__text">
+                Coffee, frappes, matcha, and tea made for everyday life.
+                Great taste, quality ingredients, and takeaway convenience
+                right here in Anabu, Imus.
             </p>
 
-            <div class="mt-8 flex flex-col gap-3 sm:flex-row">
-                <x-button href="#pricing">Explore Menu Picks</x-button>
-                <x-button href="#showcase" variant="secondary">See the Experience</x-button>
+            <div class="hero__buttons">
+                <x-button href="#menu">
+                    Explore Menu Picks
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                         stroke-linejoin="round">
+                        <path d="M5 12h14M13 6l6 6-6 6"/>
+                    </svg>
+                </x-button>
+
+                <x-button href="#features" variant="light">
+                    <span class="hero__play">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="m9 7 8 5-8 5V7Z"/>
+                        </svg>
+                    </span>
+                    See the Experience
+                </x-button>
             </div>
 
-            <div class="mt-10 grid max-w-lg grid-cols-3 gap-4 border-t border-stone-200 pt-6 text-sm">
-                <div>
-                    <p class="text-2xl font-black">36+</p>
-                    <p class="text-stone-500">Products</p>
+            <div class="stats">
+                <div class="stat">
+                    <span class="stat__icon">
+                        <svg width="19" height="19" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                             stroke-linejoin="round">
+                            <path d="M4 8h13v5a6 6 0 0 1-6 6H10a6 6 0 0 1-6-6V8Z"/>
+                            <path d="M17 9h1.5a2.5 2.5 0 0 1 0 5H17"/>
+                            <path d="M6 3.5c.6.7.6 1.3 0 2M10 3.5c.6.7.6 1.3 0 2M14 3.5c.6.7.6 1.3 0 2"/>
+                        </svg>
+                    </span>
+                    <div class="stat__value">36+</div>
+                    <div class="stat__label">Products</div>
                 </div>
-                <div>
-                    <p class="text-2xl font-black">100+</p>
-                    <p class="text-stone-500">Operating stores</p>
+
+                <div class="stat">
+                    <span class="stat__icon">
+                        <svg width="19" height="19" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                             stroke-linejoin="round">
+                            <path d="M8 14a4 4 0 1 1 8 0"/>
+                            <circle cx="12" cy="8" r="3"/>
+                            <path d="M3 20c.4-3 2.3-5 5-5M21 20c-.4-3-2.3-5-5-5"/>
+                        </svg>
+                    </span>
+                    <div class="stat__value">100+</div>
+                    <div class="stat__label">Happy Customers</div>
                 </div>
-                <div>
-                    <p class="text-2xl font-black">₱67+</p>
-                    <p class="text-stone-500">Anabu menu picks*</p>
-                </div>
-            </div>
 
-            <p class="mt-3 text-xs text-stone-400">
-                *Displayed menu prices are editable and should be verified before final submission.
-            </p>
-        </div>
-
-        <div class="relative">
-            <div class="absolute -left-10 top-10 h-40 w-40 rounded-full bg-amber-200/60 blur-3xl"></div>
-            <div class="absolute -right-10 bottom-10 h-52 w-52 rounded-full bg-coffee-100 blur-3xl"></div>
-
-            <div class="relative rounded-[2rem] border border-stone-200 bg-white p-4 shadow-2xl shadow-stone-300/40">
-                <img
-                    src="{{ asset('images/coffee-hero.svg') }}"
-                    alt="Stylized coffee cup illustration"
-                    class="aspect-[4/3] w-full rounded-[1.5rem] object-cover"
-                >
-                <div class="grid grid-cols-2 gap-3 p-3 pt-5">
-                    <div class="rounded-2xl bg-coffee-50 p-4">
-                        <p class="text-xs uppercase tracking-wider text-stone-500">Popular</p>
-                        <p class="mt-1 font-bold">Iced Spanish Latte</p>
-                    </div>
-                    <div class="rounded-2xl bg-stone-950 p-4 text-white">
-                        <p class="text-xs uppercase tracking-wider text-stone-400">Matcha</p>
-                        <p class="mt-1 font-bold">Iced Matcha Latte</p>
-                    </div>
+                <div class="stat">
+                    <span class="stat__icon">
+                        <svg width="19" height="19" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
+                             stroke-linejoin="round">
+                            <path d="M12.5 3H20v7.5L11 19.5 4.5 13 12.5 3Z"/>
+                            <circle cx="16.5" cy="7" r="1.3"/>
+                        </svg>
+                    </span>
+                    <div class="stat__value">From ₱67</div>
+                    <div class="stat__label">Starting Price</div>
                 </div>
             </div>
         </div>

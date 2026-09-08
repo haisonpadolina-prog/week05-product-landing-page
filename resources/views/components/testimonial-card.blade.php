@@ -1,21 +1,26 @@
-@props([
-    'name',
-    'position',
-    'review',
-    'initials' => 'C',
-])
+@props(['image', 'name', 'role', 'review'])
 
-<article class="rounded-3xl border border-stone-200 bg-white p-6 shadow-sm">
-    <div class="flex items-center gap-4">
-        <div class="grid h-12 w-12 place-items-center rounded-full bg-coffee-100 font-black text-coffee-700">
-            {{ $initials }}
-        </div>
+<article class="testi">
+    <div class="testi__head">
+        <img
+            class="testi__avatar"
+            src="{{ asset($image) }}"
+            alt="Sample customer portrait"
+        >
+
         <div>
-            <h3 class="font-bold">{{ $name }}</h3>
-            <p class="text-sm text-stone-500">{{ $position }}</p>
+            <div class="testi__name">{{ $name }}</div>
+            <div class="testi__role">{{ $role }}</div>
         </div>
     </div>
 
-    <div class="mt-5 text-amber-500" aria-label="5 star review">★★★★★</div>
-    <p class="mt-3 leading-7 text-stone-600">“{{ $review }}”</p>
+    <div class="stars" aria-label="5 stars">
+        @for($i = 0; $i < 5; $i++)
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="m12 3 2.7 5.7 6.3.8-4.6 4.3 1.2 6.2L12 17.1 6.4 20l1.2-6.2L3 9.5l6.3-.8L12 3Z"/>
+            </svg>
+        @endfor
+    </div>
+
+    <p class="testi__quote">&ldquo;{{ $review }}&rdquo;</p>
 </article>

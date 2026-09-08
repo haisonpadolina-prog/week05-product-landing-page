@@ -1,150 +1,231 @@
 @extends('layouts.app')
 
-@section('title', 'B1T1 Takeaway Coffee | Modern Landing Page')
-@section('description', 'A responsive Laravel and Tailwind CSS landing page redesign for B1T1 Takeaway Coffee - Anabu, Imus.')
+@section('title', 'Daily Drip Café | Fresh Brews. Better Days. — Anabu, Imus')
+@section('description', 'Daily Drip Café in Anabu, Imus, Cavite. Premium coffee, frappes, matcha, and fruit tea for your everyday moments. Starting at ₱67.')
 
 @section('content')
     <x-hero />
 
-    <section id="features" class="border-y border-stone-200 bg-white/60">
-        <div class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-            <div class="max-w-2xl">
-                <p class="text-sm font-bold uppercase tracking-[0.2em] text-coffee-600">Why B1T1</p>
-                <h2 class="mt-3 text-3xl font-black tracking-tight sm:text-4xl">Built around quality, value, and convenience.</h2>
-                <p class="mt-4 leading-7 text-stone-600">
-                    Six highlights presented as reusable Blade feature cards.
-                </p>
+    <section class="section" id="features">
+        <div class="container">
+            <div class="section-head">
+                <div class="section-head__text">
+                    <span class="label">Why Daily Drip</span>
+                    <h2 class="section-title">Our Bestsellers, Your Everyday Favorites.</h2>
+                    <p class="section-sub">
+                        Discover what makes Daily Drip Café a local favorite in Anabu, Imus.
+                    </p>
+                </div>
+
+                <a class="text-link" href="#menu">
+                    View Full Menu
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                         stroke-linejoin="round">
+                        <path d="M5 12h14M13 6l6 6-6 6"/>
+                    </svg>
+                </a>
             </div>
 
-            <div class="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-                <x-feature-card icon="☕" title="Espresso Favorites" description="Classic espresso choices including Americano, Latte, Spanish Latte, and Caramel Macchiato." />
-                <x-feature-card icon="🧊" title="Iced Coffee" description="Cold coffee selections designed for quick refreshment during commutes, errands, or study breaks." />
-                <x-feature-card icon="🍵" title="Matcha Options" description="Matcha Latte, Dirty Matcha, and Matcha Frappe give customers non-coffee alternatives." />
-                <x-feature-card icon="🥤" title="Frappe Selection" description="Espresso-based and cream-based frappes offer richer, dessert-style drink choices." />
-                <x-feature-card icon="🍓" title="Fruit Tea" description="Refreshing fruit tea flavors expand the menu for customers who want lighter drinks." />
-                <x-feature-card icon="⚡" title="Takeaway Convenience" description="A grab-and-go concept makes the brand suited to busy customers and everyday routines." />
+            <div class="feature-grid">
+                <x-feature-card
+                    title="Espresso Favorites"
+                    description="Classic and modern espresso-based drinks."
+                >
+                    <x-slot:icon>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                             stroke-linejoin="round">
+                            <path d="M4 8h13v5a6 6 0 0 1-6 6H10a6 6 0 0 1-6-6V8Z"/>
+                            <path d="M17 9h1.5a2.5 2.5 0 0 1 0 5H17"/>
+                            <path d="M4 21h13"/>
+                        </svg>
+                    </x-slot:icon>
+                </x-feature-card>
+
+                <x-feature-card
+                    title="Iced Coffee"
+                    description="Refreshing and smooth drinks for everyday sips."
+                >
+                    <x-slot:icon>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                             stroke-linejoin="round">
+                            <path d="M6 7h12l-1.2 13H7.2L6 7Z"/>
+                            <path d="M5 4h14"/>
+                            <path d="M9 11.5 12 15M15 11.5 12 15"/>
+                        </svg>
+                    </x-slot:icon>
+                </x-feature-card>
+
+                <x-feature-card
+                    title="Matcha Options"
+                    description="Creamy and refreshing premium matcha selections."
+                >
+                    <x-slot:icon>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                             stroke-linejoin="round">
+                            <path d="M11 20c-4 0-7-3-7-7 0-5 4-9 16-9 0 8-4 16-9 16Z"/>
+                            <path d="M4 20c4-6 9-9 14-11"/>
+                        </svg>
+                    </x-slot:icon>
+                </x-feature-card>
+
+                <x-feature-card
+                    title="Frappe Selection"
+                    description="Rich blended drinks for indulgent moments."
+                >
+                    <x-slot:icon>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                             stroke-linejoin="round">
+                            <path d="M7 9h10l-1 11H8L7 9Z"/>
+                            <path d="M7.5 9c0-2.5 2-4.5 4.5-4.5S16.5 6.5 16.5 9"/>
+                            <path d="M12 4.5V2"/>
+                            <path d="M13.5 20v2"/>
+                        </svg>
+                    </x-slot:icon>
+                </x-feature-card>
+
+                <x-feature-card
+                    title="Fruit Tea"
+                    description="Light, fruity, and refreshing beverages."
+                >
+                    <x-slot:icon>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                             stroke-linejoin="round">
+                            <circle cx="12" cy="14" r="7"/>
+                            <path d="M12 7c0-2 1.5-4 4-4"/>
+                            <path d="M12 7c-.5-1.5-2-2.5-3.5-2.5"/>
+                        </svg>
+                    </x-slot:icon>
+                </x-feature-card>
+
+                <x-feature-card
+                    title="Takeaway Convenience"
+                    description="Great coffee made convenient for people on the go."
+                >
+                    <x-slot:icon>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                             stroke-linejoin="round">
+                            <path d="M5 8h14l-1 12H6L5 8Z"/>
+                            <path d="M9 8V6a3 3 0 0 1 6 0v2"/>
+                        </svg>
+                    </x-slot:icon>
+                </x-feature-card>
             </div>
         </div>
     </section>
 
-    <section id="showcase">
-        <div class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <p class="text-sm font-bold uppercase tracking-[0.2em] text-coffee-600">Product Showcase</p>
-                <h2 class="mt-3 text-3xl font-black tracking-tight sm:text-4xl">A clean digital experience for a grab-and-go café.</h2>
-            </div>
+    <x-showcase />
 
-            <div class="mt-12 grid gap-6 lg:grid-cols-12">
-                <div class="overflow-hidden rounded-3xl border border-stone-200 bg-white p-4 shadow-sm lg:col-span-7">
-                    <img src="{{ asset('images/menu-dashboard.svg') }}" alt="Desktop menu dashboard mockup" class="w-full rounded-2xl">
+    <section class="section section--alt" id="pricing">
+        <div class="container">
+            <div class="section-head">
+                <div class="section-head__text">
+                    <span class="label">Popular Picks</span>
+                    <h2 class="section-title">Popular Picks, Great Value</h2>
+                    <p class="section-sub">Premium taste at prices you'll love.</p>
                 </div>
 
-                <div class="rounded-3xl bg-stone-950 p-8 text-white lg:col-span-5">
-                    <p class="text-sm font-bold uppercase tracking-widest text-amber-200">Key Highlights</p>
-                    <h3 class="mt-3 text-3xl font-black">Fast to scan. Easy to choose.</h3>
-                    <ul class="mt-7 space-y-4 text-stone-300">
-                        <li>✓ Clear drink categories</li>
-                        <li>✓ Mobile-first card layouts</li>
-                        <li>✓ Strong CTA buttons</li>
-                        <li>✓ Consistent coffee-inspired color palette</li>
-                        <li>✓ Reusable Blade architecture</li>
-                    </ul>
-
-                    <div class="mt-8 flex justify-center">
-                        <img src="{{ asset('images/mobile-view.svg') }}" alt="Mobile landing page mockup" class="w-48 rounded-[2rem] border border-stone-700">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="pricing" class="bg-white">
-        <div class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-            <div class="mx-auto max-w-2xl text-center">
-                <p class="text-sm font-bold uppercase tracking-[0.2em] text-coffee-600">Pricing</p>
-                <h2 class="mt-3 text-3xl font-black tracking-tight sm:text-4xl">Three real menu-based price cards.</h2>
-                <p class="mt-4 leading-7 text-stone-600">
-                    Your teacher asks for three pricing cards, so this redesign uses real Anabu menu items instead of inventing subscription plans.
-                </p>
+                <a class="text-link" href="#menu">
+                    View Full Menu
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                         stroke-linejoin="round">
+                        <path d="M5 12h14M13 6l6 6-6 6"/>
+                    </svg>
+                </a>
             </div>
 
-            <div class="mt-12 grid gap-6 lg:grid-cols-3">
+            <div class="price-grid">
                 <x-pricing-card
                     name="Everyday"
+                    image="images/spanish-latte.jpg"
                     price="₱67"
-                    description="A simple starting point for customers who prefer a classic, bold coffee."
-                    :features="['Hot or Iced Americano', 'Espresso-based', 'Budget-friendly choice']"
+                    description="Great coffee for everyday moments."
+                    :features="[
+                        'Classic coffee flavors',
+                        'Smooth and satisfying',
+                        'Perfect for daily sips'
+                    ]"
                 />
 
                 <x-pricing-card
                     name="Signature"
+                    image="images/mocha-frappe.jpg"
                     price="₱123"
-                    description="One of the branch’s popular creamy coffee choices for customers who want something sweeter."
-                    :features="['Iced Spanish Latte', 'Popular menu pick', 'Creamy coffee profile']"
+                    description="Our most loved coffee creations."
+                    :features="[
+                        'Premium ingredients',
+                        'Rich and unique flavors',
+                        'Customer favorite'
+                    ]"
                     :featured="true"
                 />
 
                 <x-pricing-card
                     name="Matcha"
+                    image="images/matcha-latte.jpg"
                     price="₱126"
-                    description="A non-coffee favorite for customers who enjoy a smooth, earthy drink."
-                    :features="['Iced Matcha Latte', 'Non-coffee option', 'Popular menu pick']"
+                    description="A refreshing balance in every cup."
+                    :features="[
+                        'Quality matcha',
+                        'Smooth and creamy',
+                        'Perfect iced or hot'
+                    ]"
+                />
+            </div>
+        </div>
+    </section>
+
+    {{--
+        SAMPLE PLACEHOLDER CONTENT.
+        Names, roles, ratings, reviews, and portraits below are not verified real customers.
+        Replace with permission-granted customer feedback before final submission/publication.
+    --}}
+    <section class="section" id="testimonials">
+        <div class="container">
+            <div class="section-head">
+                <div class="section-head__text">
+                    <span class="label">Customer Stories</span>
+                    <h2 class="section-title">What Our Customers Say</h2>
+                    <p class="section-sub">Sample customer-card layout for the project.</p>
+                </div>
+            </div>
+
+            <div class="testi-grid">
+                <x-testimonial-card
+                    image="images/customer-1.jpg"
+                    name="Julia R."
+                    role="Student, Imus"
+                    review="Perfect coffee for study days. Great taste and a really comfortable everyday café choice."
+                />
+
+                <x-testimonial-card
+                    image="images/customer-2.jpg"
+                    name="Mark T."
+                    role="Working Professional"
+                    review="Great coffee, reasonable prices, and a convenient stop whenever I’m in the area."
+                />
+
+                <x-testimonial-card
+                    image="images/customer-3.jpg"
+                    name="Angela S."
+                    role="Local Resident"
+                    review="I really enjoy the matcha and frappes. Clean flavors and plenty of choices."
                 />
             </div>
 
-            <p class="mt-6 text-center text-xs text-stone-400">
-                Verify menu prices again on the day you submit because third-party delivery prices can change.
+            <p class="note">
+                Sample placeholder testimonials — replace with verified customer feedback.
             </p>
         </div>
     </section>
 
-    <section id="testimonials">
-        <div class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-            <div class="max-w-2xl">
-                <p class="text-sm font-bold uppercase tracking-[0.2em] text-coffee-600">Testimonials</p>
-                <h2 class="mt-3 text-3xl font-black tracking-tight sm:text-4xl">Customer voice section.</h2>
-                <p class="mt-4 leading-7 text-stone-600">
-                    Replace these three clearly marked placeholders with customer quotes and photos you personally verify or have permission to use.
-                </p>
-            </div>
-
-            <div class="mt-10 grid gap-5 lg:grid-cols-3">
-                <x-testimonial-card
-                    name="Customer 01"
-                    position="Verified customer — replace before submission"
-                    initials="C1"
-                    review="Add a short authentic customer review here after asking permission or using a review source allowed by your instructor."
-                />
-                <x-testimonial-card
-                    name="Customer 02"
-                    position="Verified customer — replace before submission"
-                    initials="C2"
-                    review="Keep the review concise and focused on taste, service, convenience, or value."
-                />
-                <x-testimonial-card
-                    name="Customer 03"
-                    position="Verified customer — replace before submission"
-                    initials="C3"
-                    review="Use a real photo only when you have permission; otherwise ask your instructor whether an avatar is acceptable."
-                />
-            </div>
-        </div>
-    </section>
-
-    <section class="px-4 pb-20 sm:px-6 lg:px-8">
-        <div class="mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-coffee-600 px-6 py-14 text-center text-white sm:px-10">
-            <p class="text-sm font-bold uppercase tracking-[0.2em] text-amber-100">Call to Action</p>
-            <h2 class="mx-auto mt-3 max-w-3xl text-3xl font-black tracking-tight sm:text-4xl">
-                Find your next coffee break in Imus.
-            </h2>
-            <p class="mx-auto mt-4 max-w-2xl text-coffee-100">
-                Explore the menu, contact the branch, or visit the store for a quick coffee stop.
-            </p>
-
-            <div class="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
-                <x-button href="#contact" variant="secondary">Contact Store</x-button>
-                <x-button href="#pricing" variant="dark">Start Your Order</x-button>
-            </div>
-        </div>
-    </section>
+    <x-cta />
+    <x-contact />
 @endsection
