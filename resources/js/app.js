@@ -121,3 +121,88 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+
+/*
+|--------------------------------------------------------------------------
+| Smooth Scrolling + Active Navigation
+|--------------------------------------------------------------------------
+*/
+document.addEventListener('DOMContentLoaded', () => {
+    const internalLinks = document.querySelectorAll('a[href^="#"]:not([href="#"])');
+
+    internalLinks.forEach((link) => {
+        link.addEventListener('click', (event) => {
+            const targetId = link.getAttribute('href');
+
+            if (!targetId) {
+                return;
+            }
+
+            const target = document.querySelector(targetId);
+
+            if (!target) {
+                return;
+            }
+
+            event.preventDefault();
+
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+            });
+
+            if (history.pushState) {
+                history.pushState(null, '', targetId);
+            } else {
+                window.location.hash = targetId;
+            }
+        });
+    });
+
+    const sections = document.querySelectorAll(
+        '#home, #features, #menu, #pricing, #testimonials, #contact'
+    );
+
+    const navLinks = document.querySelectorAll(
+        '.nav__links a[href^="#"], .mobile-nav__links a[href^="#"]'
+    );
+
+    if (!sections.length || !navLinks.length) {
+        return;
+    }
+
+    const setActiveLink = (sectionId) => {
+        navLinks.forEach((link) => {
+            const isActive = link.getAttribute('href') === `#${sectionId}`;
+
+            link.classList.toggle('is-active', isActive);
+
+            if (isActive) {
+                link.setAttribute('aria-current', 'page');
+            } else {
+                link.removeAttribute('aria-current');
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            const visibleSections = entries
+                .filter((entry) => entry.isIntersecting)
+                .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+
+            if (visibleSections.length > 0) {
+                setActiveLink(visibleSections[0].target.id);
+            }
+        },
+        {
+            root: null,
+            rootMargin: '-30% 0px -55% 0px',
+            threshold: [0.05, 0.15, 0.3, 0.5],
+        }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+});
+

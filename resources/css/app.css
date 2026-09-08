@@ -2047,3 +2047,80 @@ svg { display: block; }
   }
 }
 
+
+/* ==========================================================================
+   CTA + NAVIGATION INTERACTION POLISH
+   ========================================================================== */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 92px;
+}
+
+section[id] {
+  scroll-margin-top: 92px;
+}
+
+.nav__links a,
+.mobile-nav__links a {
+  position: relative;
+}
+
+.nav__links a.is-active {
+  color: #fff;
+  opacity: 1;
+}
+
+.nav__links a.is-active::after {
+  width: 100%;
+}
+
+.mobile-nav__links a.is-active {
+  background: var(--beige);
+  color: var(--primary);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid rgba(185, 121, 69, 0.32);
+  outline-offset: 3px;
+}
+
+.btn {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 700px) {
+  html {
+    scroll-padding-top: 78px;
+  }
+
+  section[id] {
+    scroll-margin-top: 78px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .btn {
+    transition: none;
+  }
+}
+
