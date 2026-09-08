@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 650">
+<rect width="1000" height="650" rx="30" fill="#faf7f3"/>
+<rect x="40" y="40" width="920" height="72" rx="18" fill="#ffffff"/>
+<circle cx="82" cy="76" r="20" fill="#70472d"/>
+<text x="115" y="84" font-family="Arial" font-weight="700" font-size="24" fill="#231f20">B1T1 Menu Preview</text>
+<rect x="40" y="140" width="200" height="470" rx="22" fill="#231f20"/>
+<text x="70" y="190" font-family="Arial" font-weight="700" font-size="18" fill="#ffffff">Categories</text>
+<text x="70" y="240" font-family="Arial" font-size="17" fill="#d6d3d1">Espresso</text>
+<text x="70" y="285" font-family="Arial" font-size="17" fill="#d6d3d1">Iced Coffee</text>
+<text x="70" y="330" font-family="Arial" font-size="17" fill="#d6d3d1">Matcha</text>
+<text x="70" y="375" font-family="Arial" font-size="17" fill="#d6d3d1">Frappe</text>
+<text x="70" y="420" font-family="Arial" font-size="17" fill="#d6d3d1">Fruit Tea</text>
+<g>
+<rect x="270" y="140" width="210" height="215" rx="22" fill="#ffffff"/>
+<circle cx="375" cy="220" r="55" fill="#f7eadc"/>
+<text x="300" y="300" font-family="Arial" font-weight="700" font-size="19" fill="#231f20">Americano</text>
+<text x="300" y="327" font-family="Arial" font-size="17" fill="#70472d">From ₱67</text>
+</g>
+<g>
+<rect x="500" y="140" width="210" height="215" rx="22" fill="#ffffff"/>
+<circle cx="605" cy="220" r="55" fill="#ead6c2"/>
+<text x="530" y="300" font-family="Arial" font-weight="700" font-size="19" fill="#231f20">Spanish Latte</text>
+<text x="530" y="327" font-family="Arial" font-size="17" fill="#70472d">From ₱123</text>
+</g>
+<g>
+<rect x="730" y="140" width="230" height="215" rx="22" fill="#ffffff"/>
+<circle cx="845" cy="220" r="55" fill="#dce7d2"/>
+<text x="760" y="300" font-family="Arial" font-weight="700" font-size="19" fill="#231f20">Matcha Latte</text>
+<text x="760" y="327" font-family="Arial" font-size="17" fill="#70472d">From ₱126</text>
+</g>
+<rect x="270" y="380" width="690" height="230" rx="22" fill="#70472d"/>
+<text x="310" y="435" font-family="Arial" font-weight="700" font-size="28" fill="#ffffff">Coffee for everyday moments.</text>
+<text x="310" y="475" font-family="Arial" font-size="18" fill="#f7eadc">Responsive menu highlights • quick CTAs • clean visual hierarchy</text>
+<rect x="310" y="515" width="180" height="52" rx="26" fill="#ffffff"/>
+<text x="400" y="548" text-anchor="middle" font-family="Arial" font-weight="700" font-size="16" fill="#70472d">Explore Menu</text>
+</svg>

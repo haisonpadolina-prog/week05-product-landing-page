@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 720">
+<rect width="360" height="720" rx="42" fill="#ffffff"/>
+<rect x="125" y="14" width="110" height="22" rx="11" fill="#231f20"/>
+<circle cx="47" cy="80" r="22" fill="#70472d"/>
+<text x="82" y="86" font-family="Arial" font-weight="700" font-size="16" fill="#231f20">B1T1 Coffee</text>
+<text x="28" y="156" font-family="Arial" font-size="14" fill="#70472d">COFFEE MADE ACCESSIBLE</text>
+<text x="28" y="205" font-family="Arial" font-weight="700" font-size="32" fill="#231f20">Premium-inspired</text>
+<text x="28" y="242" font-family="Arial" font-weight="700" font-size="32" fill="#231f20">coffee, everyday.</text>
+<rect x="28" y="280" width="304" height="180" rx="26" fill="#f7eadc"/>
+<circle cx="180" cy="370" r="62" fill="#8b5e3c"/>
+<rect x="28" y="490" width="145" height="52" rx="26" fill="#70472d"/>
+<text x="100" y="523" text-anchor="middle" font-family="Arial" font-weight="700" font-size="14" fill="#ffffff">Explore Menu</text>
+<rect x="187" y="490" width="145" height="52" rx="26" fill="#ffffff" stroke="#d6d3d1"/>
+<text x="260" y="523" text-anchor="middle" font-family="Arial" font-weight="700" font-size="14" fill="#231f20">Contact</text>
+<rect x="28" y="574" width="304" height="100" rx="22" fill="#231f20"/>
+<text x="48" y="613" font-family="Arial" font-weight="700" font-size="17" fill="#ffffff">Anabu, Imus</text>
+<text x="48" y="642" font-family="Arial" font-size="14" fill="#d6d3d1">Responsive mobile preview</text>
+</svg>
