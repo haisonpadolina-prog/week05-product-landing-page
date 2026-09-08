@@ -1,59 +1,471 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+Daily Drip Café — Responsive Product Landing Page
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A responsive café product landing page built with Laravel, Blade Components, Tailwind CSS, and Vite for the Week 5 Mini Project.
 
-## About Laravel
+The project focuses on creating a clean, modern, and mobile-friendly landing page for Daily Drip Café, featuring a warm coffee-shop visual style, reusable Blade components, responsive layouts, and lightweight front-end interactions.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Project Overview
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Daily Drip Café is presented as a community café landing page designed to make it easy for customers to explore featured drinks, browse product categories, view pricing, read testimonials, and contact the store.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+The interface uses a warm coffee-inspired visual direction with:
 
-## Learning Laravel
+Full-screen café hero image
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+Brown, cream, and beige color palette
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Reusable product and content cards
 
-## Laravel Sponsors
+Responsive layouts for desktop, tablet, and mobile
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+Interactive menu filtering and search
 
-### Premium Partners
+Smooth internal navigation
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+Objectives
 
-## Contributing
+The main objectives of this project are to:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Build a responsive product landing page using Laravel
 
-## Code of Conduct
+Practice reusable Blade Components
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Apply Tailwind CSS and custom responsive styling
 
-## Security Vulnerabilities
+Create a consistent visual design system
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Improve mobile and tablet usability
 
-## License
+Add simple JavaScript interactions
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Organize project files clearly
+
+Practice meaningful Git commits and project documentation
+
+Technologies Used
+
+Laravel
+
+PHP
+
+Blade Templates
+
+Blade Components
+
+Tailwind CSS
+
+Custom CSS
+
+JavaScript
+
+Vite
+
+Git
+
+GitHub
+
+Main Features
+
+Responsive Navigation
+
+The navigation bar includes:
+
+Home
+
+Features
+
+Menu
+
+Pricing
+
+Testimonials
+
+Contact
+
+Sign In
+
+Get Started
+
+A responsive hamburger menu is provided for smaller screens.
+
+Full-Screen Hero Section
+
+The hero section includes:
+
+Full-screen café background image
+
+Main headline
+
+Supporting text
+
+Primary and secondary CTA buttons
+
+Product statistics
+
+Responsive image positioning
+
+Feature Section
+
+The page contains six feature cards that highlight the café experience and service benefits.
+
+Interactive Menu Showcase
+
+The menu section includes:
+
+Drink search
+
+Category filtering
+
+Product images
+
+Product names
+
+Prices
+
+Result counter
+
+Empty-state message
+
+Available categories include:
+
+All
+
+Coffee
+
+Iced Coffee
+
+Frappe
+
+Matcha
+
+Fruit Tea
+
+Pricing Section
+
+Three pricing cards are displayed with:
+
+Product images
+
+Starting prices
+
+Included features
+
+CTA buttons
+
+Testimonials
+
+The testimonial section uses reusable testimonial cards for customer feedback presentation.
+
+Note: Review content and customer images used during development may be placeholder/demo content and should be replaced with verified business information before public use.
+
+Call-to-Action Section
+
+The CTA section contains:
+
+Café background photography
+
+Strong visual contrast
+
+Explore Menu button
+
+Contact Store button
+
+Smooth Scrolling
+
+Internal navigation and CTA buttons use smooth scrolling to move between page sections.
+
+Active Navigation State
+
+Navigation links update visually while the user scrolls through the landing page.
+
+Blade Components
+
+Reusable Blade Components are used throughout the project.
+
+resources/views/components/
+├── navbar.blade.php
+├── hero.blade.php
+├── feature-card.blade.php
+├── product-card.blade.php
+├── pricing-card.blade.php
+├── testimonial-card.blade.php
+├── button.blade.php
+├── showcase.blade.php
+├── cta.blade.php
+├── contact.blade.php
+└── footer.blade.php
+
+The main layout is located at:
+
+resources/views/layouts/app.blade.php
+
+The landing page is located at:
+
+resources/views/pages/home.blade.php
+
+Project Structure
+
+week05-product-landing-page/
+├── app/
+├── bootstrap/
+├── config/
+├── database/
+├── public/
+│   ├── documentation/
+│   │   ├── before.png
+│   │   └── after.png
+│   └── images/
+│       ├── logo.png
+│       ├── hero-cafe-bg.png
+│       ├── spanish-latte.jpg
+│       ├── caramel-macchiato.jpg
+│       ├── mocha-frappe.jpg
+│       ├── americano.jpg
+│       ├── fruit-tea.jpg
+│       └── matcha-latte.jpg
+├── resources/
+│   ├── css/
+│   │   └── app.css
+│   ├── js/
+│   │   └── app.js
+│   └── views/
+│       ├── components/
+│       ├── layouts/
+│       └── pages/
+├── routes/
+│   └── web.php
+├── README.md
+└── package.json
+
+Responsive Web Design
+
+The landing page was tested and refined for different viewport sizes.
+
+Recommended test widths:
+
+Device
+
+Width
+
+Desktop
+
+1440px
+
+Laptop
+
+1024px
+
+Tablet
+
+768px
+
+Mobile
+
+390px
+
+Responsive improvements include:
+
+Flexible hero sizing
+
+Mobile-friendly navigation
+
+Responsive statistic cards
+
+Adaptive feature grids
+
+Scrollable menu filters
+
+Responsive product cards
+
+Stacked pricing cards on smaller screens
+
+Responsive CTA and footer
+
+Horizontal overflow prevention
+
+Before and After
+
+Before
+
+The earlier version used a simpler light hero layout with a separate product image and basic card styling.
+
+
+
+After
+
+The final version introduces:
+
+Full-screen café photo hero
+
+Improved typography hierarchy
+
+Better statistic cards
+
+Responsive navigation
+
+Interactive menu search and filtering
+
+Improved product cards
+
+Stronger CTA presentation
+
+Better mobile and tablet layouts
+
+
+
+Installation and Setup
+
+1. Clone the repository
+
+git clone https://github.com/YOUR-USERNAME/week05-product-landing-page.git
+
+2. Open the project folder
+
+cd week05-product-landing-page
+
+3. Install PHP dependencies
+
+composer install
+
+4. Install frontend dependencies
+
+npm install
+
+5. Create the environment file
+
+Windows PowerShell:
+
+Copy-Item .env.example .env
+
+Or:
+
+cp .env.example .env
+
+6. Generate the application key
+
+php artisan key:generate
+
+7. Start Laravel
+
+php artisan serve
+
+8. Start Vite in another terminal
+
+npm run dev
+
+9. Open the application
+
+http://127.0.0.1:8000
+
+Git Workflow
+
+The project uses meaningful Git commits to track development progress.
+
+Examples include:
+
+chore: initialize Laravel landing page project
+feat: create landing page layout and Blade structure
+style: finalize Daily Drip Cafe landing page design
+feat: implement responsive mobile navigation
+feat: add menu search and category filtering
+fix: prevent duplicate mobile navigation on desktop
+feat: connect landing page CTA interactions
+style: improve responsive behavior across devices
+docs: add before and after UI comparison
+docs: complete project README documentation
+
+UI Design Decisions
+
+The interface uses a warm café-inspired design system.
+
+Color Direction
+
+Espresso brown
+
+Warm beige
+
+Cream
+
+White
+
+Muted neutral text
+
+Typography
+
+The interface uses Poppins for a clean, modern, and readable visual style.
+
+Visual Approach
+
+The design prioritizes:
+
+Strong hierarchy
+
+Large hero imagery
+
+Clear CTA buttons
+
+Rounded cards
+
+Soft shadows
+
+Consistent spacing
+
+Responsive readability
+
+Learning Reflection
+
+This project helped improve my understanding of:
+
+Building layouts using Laravel Blade
+
+Creating reusable Blade Components
+
+Structuring a responsive landing page
+
+Styling responsive interfaces
+
+Using JavaScript for simple UI interactions
+
+Testing layouts at multiple screen sizes
+
+Organizing assets and project files
+
+Using Git commits to document development progress
+
+Improving a design through multiple iterations
+
+One of the most important lessons from the project was learning how reusable components make a Laravel project easier to maintain. Instead of repeating the same markup, sections such as buttons, feature cards, pricing cards, and testimonials can be managed through reusable Blade files.
+
+The responsive design process also showed the importance of testing the interface on different screen sizes rather than designing only for desktop.
+
+Future Improvements
+
+Possible future improvements include:
+
+Real authentication for Sign In
+
+Backend-powered contact form
+
+Database-driven café products
+
+Favorite drinks feature
+
+Order management
+
+Store locator
+
+Real customer testimonials
+
+Dynamic pricing
+
+Admin dashboard
+
+Online ordering
+
+Author
+
+Created as part of the Week 5 Responsive Product Landing Page Mini Project.
+
+License
+
+This project is intended for educational purposes.
