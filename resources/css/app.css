@@ -1944,3 +1944,106 @@ svg { display: block; }
   }
 }
 
+
+/* ==========================================================================
+   MOBILE NAVIGATION FIX
+   Keeps the mobile menu hidden on desktop and styled on tablet/mobile.
+   ========================================================================== */
+
+.mobile-nav {
+  display: none;
+}
+
+@media (max-width: 1100px) {
+  .mobile-nav {
+    position: absolute;
+    top: 74px;
+    left: 50%;
+    z-index: 100;
+
+    display: block;
+    width: min(94%, 460px);
+    padding: 14px;
+
+    background: rgba(255, 253, 249, 0.98);
+    border: 1px solid rgba(59, 36, 22, 0.10);
+    border-radius: 20px;
+
+    box-shadow: 0 24px 50px rgba(30, 23, 19, 0.20);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transform: translateX(-50%) translateY(-10px);
+
+    transition:
+      opacity 0.22s ease,
+      transform 0.22s ease,
+      visibility 0.22s ease;
+  }
+
+  .mobile-nav.mobile-nav--open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+
+    transform: translateX(-50%) translateY(0);
+  }
+
+  .mobile-nav__links {
+    display: grid;
+    gap: 4px;
+  }
+
+  .mobile-nav__links a {
+    display: block;
+    padding: 13px 14px;
+
+    border-radius: 12px;
+
+    color: var(--dark);
+    font-size: 14px;
+    font-weight: 600;
+
+    transition:
+      background 0.2s ease,
+      color 0.2s ease;
+  }
+
+  .mobile-nav__links a:hover {
+    background: var(--beige);
+    color: var(--primary);
+  }
+
+  .mobile-nav__actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+
+    margin-top: 12px;
+    padding-top: 12px;
+
+    border-top: 1px solid rgba(59, 36, 22, 0.08);
+  }
+
+  .mobile-nav__actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .mobile-nav {
+    top: 68px;
+    width: calc(100% - 28px);
+  }
+
+  .mobile-nav__actions {
+    grid-template-columns: 1fr;
+  }
+}
+
