@@ -1,11 +1,50 @@
 @php
     $products = [
-        ['image' => 'images/spanish-latte.jpg', 'name' => 'Spanish Latte', 'price' => '₱67'],
-        ['image' => 'images/caramel-macchiato.jpg', 'name' => 'Caramel Macchiato', 'price' => '₱89'],
-        ['image' => 'images/mocha-frappe.jpg', 'name' => 'Mocha Frappe', 'price' => '₱123'],
-        ['image' => 'images/matcha-latte.jpg', 'name' => 'Matcha Latte', 'price' => '₱126'],
-        ['image' => 'images/americano.jpg', 'name' => 'Americano', 'price' => '₱67'],
-        ['image' => 'images/fruit-tea.jpg', 'name' => 'Fruit Tea', 'price' => '₱95'],
+        [
+            'image' => 'images/spanish-latte.jpg',
+            'name' => 'Spanish Latte',
+            'price' => '₱67',
+            'category' => 'iced-coffee',
+        ],
+        [
+            'image' => 'images/caramel-macchiato.jpg',
+            'name' => 'Caramel Macchiato',
+            'price' => '₱89',
+            'category' => 'iced-coffee',
+        ],
+        [
+            'image' => 'images/mocha-frappe.jpg',
+            'name' => 'Mocha Frappe',
+            'price' => '₱123',
+            'category' => 'frappe',
+        ],
+        [
+            'image' => 'images/matcha-latte.jpg',
+            'name' => 'Matcha Latte',
+            'price' => '₱126',
+            'category' => 'matcha',
+        ],
+        [
+            'image' => 'images/americano.jpg',
+            'name' => 'Americano',
+            'price' => '₱67',
+            'category' => 'coffee',
+        ],
+        [
+            'image' => 'images/fruit-tea.jpg',
+            'name' => 'Fruit Tea',
+            'price' => '₱95',
+            'category' => 'fruit-tea',
+        ],
+    ];
+
+    $filters = [
+        'all' => 'All',
+        'coffee' => 'Coffee',
+        'iced-coffee' => 'Iced Coffee',
+        'frappe' => 'Frappe',
+        'matcha' => 'Matcha',
+        'fruit-tea' => 'Fruit Tea',
     ];
 @endphp
 
@@ -14,7 +53,7 @@
         <div class="showcase">
             <div class="showcase__grid">
 
-                {{-- Desktop menu dashboard mockup. Filters/search become functional in the next phase. --}}
+                {{-- Interactive desktop menu dashboard --}}
                 <div class="dash">
                     <aside class="dash__side">
                         <div class="dash__brand">
@@ -85,32 +124,67 @@
                         <div class="dash__eyebrow">Daily Drip Café</div>
                         <div class="dash__title">Our Menu</div>
 
-                        <div class="dash__search">
+                        {{-- Working menu search --}}
+                        <label class="dash__search" for="menuSearch">
                             <svg width="15" height="15" viewBox="0 0 24 24" fill="none"
                                  stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
                                 <circle cx="11" cy="11" r="6"/>
                                 <path d="m16 16 4 4"/>
                             </svg>
-                            Search drinks...
-                        </div>
 
-                        <div class="pills">
-                            <span class="pill is-active">All</span>
-                            <span class="pill">Coffee</span>
-                            <span class="pill">Iced Coffee</span>
-                            <span class="pill">Frappe</span>
-                            <span class="pill">Matcha</span>
-                            <span class="pill">Fruit Tea</span>
-                        </div>
+                            <input
+                                id="menuSearch"
+                                type="search"
+                                placeholder="Search drinks..."
+                                autocomplete="off"
+                                aria-label="Search Daily Drip drinks"
+                            >
+                        </label>
 
-                        <div class="dash__products">
-                            @foreach($products as $product)
-                                <x-product-card
-                                    :image="$product['image']"
-                                    :name="$product['name']"
-                                    :price="$product['price']"
-                                />
+                        {{-- Working category filters --}}
+                        <div class="pills menu-filters" aria-label="Filter menu categories">
+                            @foreach($filters as $value => $label)
+                                <button
+                                    type="button"
+                                    class="pill menu-filter {{ $value === 'all' ? 'is-active' : '' }}"
+                                    data-filter="{{ $value }}"
+                                    aria-pressed="{{ $value === 'all' ? 'true' : 'false' }}"
+                                >
+                                    {{ $label }}
+                                </button>
                             @endforeach
+                        </div>
+
+                        <div class="dash__results" id="menuResults" aria-live="polite">
+                            {{ count($products) }} drinks found
+                        </div>
+
+                        <div class="dash__products" id="menuProducts">
+                            @foreach($products as $product)
+                                <div
+                                    class="menu-product"
+                                    data-name="{{ strtolower($product['name']) }}"
+                                    data-category="{{ $product['category'] }}"
+                                >
+                                    <x-product-card
+                                        :image="$product['image']"
+                                        :name="$product['name']"
+                                        :price="$product['price']"
+                                    />
+                                </div>
+                            @endforeach
+                        </div>
+
+                        <div class="menu-empty" id="menuEmpty" hidden>
+                            <span class="menu-empty__icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                     stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+                                    <circle cx="11" cy="11" r="6"/>
+                                    <path d="m16 16 4 4"/>
+                                </svg>
+                            </span>
+                            <strong>No drinks found</strong>
+                            <span>Try another search or category.</span>
                         </div>
                     </div>
                 </div>
